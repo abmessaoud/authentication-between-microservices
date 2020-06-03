@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+service:
+  jwtAlgorithmKey: sampleJwtAlgorithmKey
+  registeredSecretKeys:
+    - serviceB-SecretKey-Provided-By-ServiceA
+
+spring:
+  application:
+    name: service-b
+
+feign:
+  hystrix:
+    enabled: false

@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+service:
+  jwtAlgorithmKey: sampleJwtAlgorithmKey #will be used as key in JWT Algo
+  serviceBSecretKey: serviceB-SecretKey-Provided-By-ServiceA #this is the key that called service (`service B`) will compare on decoding token
+
+spring:
+  application:
+    name: service-a
+
+feign:
+  hystrix:
+    enabled: false
